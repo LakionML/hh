@@ -1,18 +1,16 @@
-<app-header>
-</app-header>
 <div class="container">
-    <div class="row">
+    <div class="row vh-100">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5 shadow">
                 <div class="card-body">
                     <img class="img-fluid mx-auto d-block" src="../assets/logo.svg">
                     <h2 class="card-title text-left">Enter Details</h2>
 
-                    <form #CreateQuiz1="ngForm" (ngSubmit)="CreateQuiz1.form.valid && onSubmit(CreateQuiz1)">
+                    <form #detailsForm="ngForm" (ngSubmit)="detailsForm.form.valid && onSubmit(detailsForm)">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Name" class="form-control" [(ngModel)]="model.name" #name="ngModel" [ngClass]="{ 'is-invalid': CreateQuiz1.submitted && name.invalid }" required>
+                            <input type="text" name="name" placeholder="Name" class="form-control" [(ngModel)]="model.name" #name="ngModel" [ngClass]="{ 'is-invalid': detailsForm.submitted && name.invalid }" required>
                             
-                            <div class="invalid-feedback" *ngIf="CreateQuiz1.submitted && name.invalid">
+                            <div class="invalid-feedback" *ngIf="detailsForm.submitted && name.invalid">
                                 <p *ngIf="name.errors.required">Name is required</p>
                             </div>
 
@@ -20,9 +18,9 @@
 
                         <div class="form-group">
 
-                            <input type="number" name="age" placeholder="Age" min="10" class="form-control" [(ngModel)]="model.age" #age="ngModel" [ngClass]="{ 'is-invalid': CreateQuiz1.submitted && age.invalid }" required>
+                            <input type="number" name="age" placeholder="Age" min="10" class="form-control" [(ngModel)]="model.age" #age="ngModel" [ngClass]="{ 'is-invalid': detailsForm.submitted && age.invalid }" required>
                             
-                            <div class="invalid-feedback" *ngIf="CreateQuiz1.submitted && age.invalid">
+                            <div class="invalid-feedback" *ngIf="detailsForm.submitted && age.invalid">
                                 <p *ngIf="age.errors.required">Age is required</p>
                             </div>
 
@@ -36,7 +34,7 @@
                             
                         </div>
 
-                        <button (click)="btnClick()" class="btn btn-lg btn-primary btn-block text-uppercase ">Continue</button>
+                        <button (click)="btnClick()" class="btn btn-lg btn-primary btn-block">Continue</button>
 
                     </form>
                     <div>{{result}}</div>
