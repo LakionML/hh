@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { jsonpFactory } from '@angular/http/src/http_module';
 import { Observable } from 'rxjs';
-import { QuectionService } from './quections';
 import {DatabaseService} from "../services/db.service";
 export class CreateQuiz1s {
   public name: string;
@@ -13,13 +12,13 @@ export class CreateQuiz1s {
 }
 @Component({
   selector: 'app-createasurvey',
-  templateUrl: './createasurvey.component.html',
-  styleUrls: ['./createasurvey.component.css'],
+  templateUrl: './enter-details.component.html',
+  styleUrls: ['./enter-details.component.css'],
   providers:[DatabaseService]
 })
 
 
-export class CreateasurveyComponent implements OnInit {
+export class EnterDetailsComponent implements OnInit {
 
 
   public  quections = [];

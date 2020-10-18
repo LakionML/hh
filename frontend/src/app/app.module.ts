@@ -5,9 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
 import { LoginComponent } from './login/login.component';
-import { CreateasurveyComponent } from './createasurvey/createasurvey.component';
+import { EnterDetailsComponent } from './enter-details/enter-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
@@ -25,25 +24,18 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    CreateasurveyComponent,
+    EnterDetailsComponent,
     QuizViewComponent,
     NewQuizComponent,
     AdminDashboardComponent,
-    
-
-
- 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-HttpClientModule,
+    HttpClientModule,
     AppRoutingModule,
-
     NgbModule,
-
     ReactiveFormsModule,
-
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
     [BrowserModule, NgxPaginationModule],
     FormlyBootstrapModule

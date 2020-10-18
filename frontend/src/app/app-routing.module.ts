@@ -3,25 +3,18 @@ import { HttpModule  } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
-import { CreateasurveyComponent } from './createasurvey/createasurvey.component';
-
+import { EnterDetailsComponent } from './enter-details/enter-details.component';
 import { QuizViewComponent } from './quiz-view/quiz-view.component';
 import { NewQuizComponent } from './new-quiz/new-quiz.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 const routes: Routes = [
-
   {path:"",pathMatch:"full",redirectTo:"login"},
-
-
-
-  
   {path:"login",component:LoginComponent},
-  {path:"createasurvey",component:CreateasurveyComponent},
+  {path:"enter-details",component:EnterDetailsComponent},
   {path:"dashboard",component:AdminDashboardComponent},
   {path:"quiz-view",component:QuizViewComponent},
   {path:"NewQuiz",component:NewQuizComponent},
-
-
 ];
 
 @NgModule({
@@ -29,6 +22,7 @@ const routes: Routes = [
   
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
 
 // @NgModule({
