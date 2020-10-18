@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { EnterDetailsComponent } from './enter-details/enter-details.component';
+import { TakeQuiz } from './take-quiz/take-quiz.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
@@ -24,7 +24,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     NavComponent,
     FooterComponent,
     LoginComponent,
-    EnterDetailsComponent,
+    TakeQuiz,
     QuizViewComponent,
     NewQuizComponent,
     AdminDashboardComponent,

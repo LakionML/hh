@@ -3,7 +3,7 @@ import { HttpModule  } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
-import { EnterDetailsComponent } from './enter-details/enter-details.component';
+import { TakeQuiz } from './take-quiz/take-quiz.component';
 import { QuizViewComponent } from './quiz-view/quiz-view.component';
 import { NewQuizComponent } from './new-quiz/new-quiz.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -11,7 +11,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 const routes: Routes = [
   {path:"",pathMatch:"full",redirectTo:"login"},
   {path:"login",component:LoginComponent},
-  {path:"enter-details",component:EnterDetailsComponent},
+  {path:"take-quiz",component:TakeQuiz},
   {path:"dashboard",component:AdminDashboardComponent},
   {path:"quiz-view",component:QuizViewComponent},
   {path:"NewQuiz",component:NewQuizComponent},

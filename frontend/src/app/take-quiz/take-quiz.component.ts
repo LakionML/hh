@@ -12,13 +12,13 @@ export class CreateQuiz1s {
 }
 @Component({
   selector: 'app-createasurvey',
-  templateUrl: './enter-details.component.html',
-  styleUrls: ['./enter-details.component.css'],
+  templateUrl: './take-quiz.component.html',
+  styleUrls: ['./take-quiz.component.css'],
   providers:[DatabaseService]
 })
 
 
-export class EnterDetailsComponent implements OnInit {
+export class TakeQuiz implements OnInit {
 
 
   public  quections = [];

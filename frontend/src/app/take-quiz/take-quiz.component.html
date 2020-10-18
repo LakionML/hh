@@ -27,11 +27,9 @@
                         </div>
 
                         <div class="form-group">
-
                             <select class="form-control" id="power" required (ngModelChange)="getSelectedValue($event)" [ngModel]="selectedValue" [ngModelOptions]="{standalone: true}"> 
                                 <option *ngFor=" let option of options " [value]="option.value">{{option.label}}</option>
                             </select>
-                            
                         </div>
 
                         <button (click)="btnClick()" class="btn btn-lg btn-primary btn-block">Continue</button>
@@ -42,5 +40,33 @@
             </div>
         </div>
     </div>
-    
-    </div>
+
+    <div class="card card-signin my-5 shadow">
+        <div class="card-body qdesc">
+            <img class="img-fluid mx-auto d-block" src="../assets/logo.svg">
+            <div>
+                <h4 class="card-title text-center mt-3"></h4>
+                <p class="text-center"></p>
+            </div>
+
+            <table class="table text-center">
+                <thead class="text-center">
+                    <tr class="text-center" *ngFor="let Quiz of quections">
+                        <h4 class="card-title text-center mt-3">{{Quiz.Title}}</h4>
+                        <p class="text-center">{{Quiz.Description}} ID:{{Quiz.QuizID}}</p>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of data |paginate:{id:'listing_pagination', itemsPerPage:5,currentPage:page,totalItems:totalRecords}">
+
+                        <h5>{{item.Questions.Question}}</h5>
+                        <h5>{{item.Question.Message}}</h5>
+                        <h5>{{item.Question.Message}}</h5>
+                        <h5>{{item.Options.Option}}</h5>
+                        <h5>{{item.Quiz.Description}}</h5>
+                        <h5>{{item}}</h5>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
